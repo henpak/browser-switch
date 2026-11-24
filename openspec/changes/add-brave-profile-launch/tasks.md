@@ -3,7 +3,7 @@
 ## 1. Projektgerüst
 
 - [x] 1.1 `Package.swift` mit `BrowserSwitchCore`, `BrowserSwitch` (Executable) und `BrowserSwitchCoreTests` anlegen, macOS 15; `.gitignore` für `.build/` und `build/`; prüfen: `swift build` baut `BrowserSwitchCore`
-- [ ] 1.2 `Resources/Info.plist` mit Bundle-ID `io.github.henpak.browserswitch`, `LSUIElement`, `CFBundleURLTypes` (`http`, `https`) und `CFBundleDocumentTypes` (`public.html`, `public.xhtml`); prüfen: `plutil -lint` meldet OK
+- [x] 1.2 `Resources/Info.plist` mit Bundle-ID `io.github.henpak.browserswitch`, `LSUIElement`, `CFBundleURLTypes` (`http`, `https`) und `CFBundleDocumentTypes` (`public.html`, `public.xhtml`); prüfen: `plutil -lint` meldet OK
 - [x] 1.3 `scripts/package-app.sh` (Release-Build, Bundle zusammensetzen, `codesign --sign -`, optional `--universal`/`--zip`) und `scripts/build-app.sh` (installieren nach `~/Applications`, `--open`); prüfen: `shellcheck scripts/*.sh` ohne Befunde
 
 ## 2. Core: Brave-Profile
@@ -23,11 +23,11 @@
 - [ ] 4.2 Zielprofil-Menü: Profile mit Farbpunkt, Haken am Ziel, Klick setzt Ziel (Verzeichnis + Name in `UserDefaults`), Neu-Einlesen bei jedem Öffnen, Hinweiszeilen „Brave nicht gefunden“ und „Zielprofil fehlt: <Name>“; prüfen: auf dem Mac Szenarien aus `target-profile-menu`
 - [ ] 4.3 Standardbrowser-Status im Menü und „Als Standardbrowser festlegen“; prüfen: auf dem Mac Szenarien aus `default-browser`
 - [ ] 4.4 Links empfangen (`application(_:open:)`) und Brave über `NSWorkspace` mit Profilargument starten; Hinweise für fehlendes Profil (mit „In Brave öffnen (ohne Profilwahl)“) und fehlendes Brave (mit „URL kopieren“); prüfen: CI baut, Szenarien aus `brave-launch` auf dem Mac
-- [ ] 4.5 README um Bauen, Installieren, Als-Standardbrowser-Festlegen und den Machbarkeitstest ergänzen; prüfen: Befehle im README entsprechen den Skripten
+- [x] 4.5 README um Bauen, Installieren, Als-Standardbrowser-Festlegen und den Machbarkeitstest ergänzen; prüfen: Befehle im README entsprechen den Skripten
 
 ## 5. CI
 
-- [ ] 5.1 `.github/workflows/ci.yml`: macOS-15 mit `swift build`, `swift test`, `scripts/package-app.sh --universal --zip`, Bundle prüfen, Artefakt hochladen; ShellCheck-Job; prüfen: Lauf auf `main` ist grün
+- [x] 5.1 `.github/workflows/ci.yml`: macOS-15 mit `swift build`, `swift test`, `scripts/package-app.sh --universal --zip`, Bundle prüfen, Artefakt hochladen; ShellCheck-Job; prüfen: Lauf auf `main` ist grün
 
 ## 6. Machbarkeitstest (auf dem Mac, durch den Nutzer)
 
