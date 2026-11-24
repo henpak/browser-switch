@@ -5,8 +5,8 @@
 ## Problem
 
 Links aus Outlook, Teams, Slack oder dem Terminal öffnen immer im zuletzt aktiven
-Brave-Profil. SharePoint von Arbeit landet im Kunden-Profil, der Login-Portal-Login von
-Kunde im privaten. Jedes Mal heißt es kopieren, Profil wechseln, einfügen,
+Brave-Profil. SharePoint-Links der eigenen Firma landen im Kunden-Profil, das Login-Portal
+des Kunden im privaten. Jedes Mal heißt es kopieren, Profil wechseln, einfügen,
 und die SSO-Sitzungen geraten durcheinander.
 
 Velja löst das, ist aber Closed Source. Finicky ist Open Source, fragt aber nicht
@@ -96,7 +96,7 @@ Aufwand: etwa 3–4 Arbeitstage bis zum MVP, rund eine Woche bis v1.0.
 
 ## Offene Fragen
 
-- [ ] Kommen Arbeits- oder Kunden-Mails mit umgeleiteten Links an? Dann F10 ins MVP.
+- [ ] Kommen Mails von der eigenen Firma oder vom Kunden mit umgeleiteten Links an? Dann F10 ins MVP.
 - [ ] Unbekannte Links: immer fragen oder still im privaten Profil öffnen (`⌥` für das Panel)?
 - [ ] Wird der Mac zentral verwaltet, und darf der Standardbrowser geändert werden?
 - [ ] Als Open Source veröffentlichen?
@@ -105,8 +105,8 @@ Aufwand: etwa 3–4 Arbeitstage bis zum MVP, rund eine Woche bis v1.0.
 
 Das MVP ist fertig, wenn eine Arbeitswoche lang kein Link mehr umkopiert werden muss und:
 
-- [ ] ein Arbeits-SharePoint-Link aus Outlook im Arbeits-Profil öffnet, auch wenn das Kunden-Profil vorne ist,
-- [ ] der Kunden-Login-Portal-Login aus Teams im Kunden-Profil öffnet,
+- [ ] ein SharePoint-Link der eigenen Firma aus Outlook im Arbeits-Profil öffnet, auch wenn das Kunden-Profil vorne ist,
+- [ ] das Login-Portal des Kunden aus Teams im Kunden-Profil öffnet,
 - [ ] ein unbekannter Link das Panel zeigt und sich per Zifferntaste ohne Maus öffnen lässt,
 - [ ] derselbe Host nach „Host merken“ nie wieder nachfragt, ein anderer Host derselben Firma schon,
 - [ ] `⌥`-Klick auf einen gemerkten Link das Panel zeigt und die neue Wahl sofort gilt,

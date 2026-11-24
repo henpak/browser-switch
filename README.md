@@ -1,6 +1,6 @@
 # BrowserSwitch
 
-macOS-Menüleisten-App, die sich als Standardbrowser einträgt und Links ins passende Brave-Profil leitet (privat, Arbeit, Kunde).
+macOS-Menüleisten-App, die sich als Standardbrowser einträgt und Links ins passende Brave-Profil leitet (z. B. Privat, Arbeit, Kunde).
 
 Idee, Scope und Anforderungen: [proposal.md](proposal.md). Die Arbeit läuft über
 [OpenSpec](https://github.com/Fission-AI/OpenSpec) unter [`openspec/`](openspec/).

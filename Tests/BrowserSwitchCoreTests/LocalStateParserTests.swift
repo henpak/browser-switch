@@ -11,9 +11,9 @@ final class LocalStateParserTests: XCTestCase {
         let snapshot = try parse("""
         { "profile": {
             "info_cache": {
-              "Profile 2": { "name": "Kunde", "profile_highlight_color": -16744448 },
+              "Profile 2": { "name": "Kunde",  "profile_highlight_color": -16744448 },
               "Default":   { "name": "Privat",         "profile_highlight_color": -65536 },
-              "Profile 1": { "name": "Arbeit",           "profile_highlight_color": -16776961 }
+              "Profile 1": { "name": "Arbeit", "profile_highlight_color": -16776961 }
             },
             "profiles_order": ["Default", "Profile 1", "Profile 2"],
             "last_used": "Profile 1"
