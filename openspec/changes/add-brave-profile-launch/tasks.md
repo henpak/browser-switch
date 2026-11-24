@@ -2,20 +2,20 @@
 
 ## 1. Projektgerüst
 
-- [ ] 1.1 `Package.swift` mit `BrowserSwitchCore`, `BrowserSwitch` (Executable) und `BrowserSwitchCoreTests` anlegen, macOS 15; `.gitignore` für `.build/` und `build/`; prüfen: `swift build` baut `BrowserSwitchCore`
+- [x] 1.1 `Package.swift` mit `BrowserSwitchCore`, `BrowserSwitch` (Executable) und `BrowserSwitchCoreTests` anlegen, macOS 15; `.gitignore` für `.build/` und `build/`; prüfen: `swift build` baut `BrowserSwitchCore`
 - [ ] 1.2 `Resources/Info.plist` mit Bundle-ID `io.github.henpak.browserswitch`, `LSUIElement`, `CFBundleURLTypes` (`http`, `https`) und `CFBundleDocumentTypes` (`public.html`, `public.xhtml`); prüfen: `plutil -lint` meldet OK
-- [ ] 1.3 `scripts/package-app.sh` (Release-Build, Bundle zusammensetzen, `codesign --sign -`, optional `--universal`/`--zip`) und `scripts/build-app.sh` (installieren nach `~/Applications`, `--open`); prüfen: `shellcheck scripts/*.sh` ohne Befunde
+- [x] 1.3 `scripts/package-app.sh` (Release-Build, Bundle zusammensetzen, `codesign --sign -`, optional `--universal`/`--zip`) und `scripts/build-app.sh` (installieren nach `~/Applications`, `--open`); prüfen: `shellcheck scripts/*.sh` ohne Befunde
 
 ## 2. Core: Brave-Profile
 
-- [ ] 2.1 `BraveProfile` und Parser für `Local State` (Name, Verzeichnis, Farbe, Reihenfolge, `last_used`), tolerant bei fehlenden Feldern und kaputtem JSON; prüfen: Unit-Tests mit Beispiel-JSON für drei Profile, fehlende Farbe, fehlendes `profiles_order`, ungültiges JSON
-- [ ] 2.2 Umrechnung vorzeichenbehaftetes ARGB → RGB-Komponenten mit grauer Ersatzfarbe; prüfen: Unit-Tests für negative Werte, `0` und fehlenden Wert
-- [ ] 2.3 Profilquelle, die `Local State` aus dem Standardpfad liest und „nicht gefunden“ / „nicht lesbar“ unterscheidet; prüfen: Unit-Tests mit temporärem Verzeichnis
+- [x] 2.1 `BraveProfile` und Parser für `Local State` (Name, Verzeichnis, Farbe, Reihenfolge, `last_used`), tolerant bei fehlenden Feldern und kaputtem JSON; prüfen: Unit-Tests mit Beispiel-JSON für drei Profile, fehlende Farbe, fehlendes `profiles_order`, ungültiges JSON
+- [x] 2.2 Umrechnung vorzeichenbehaftetes ARGB → RGB-Komponenten mit grauer Ersatzfarbe; prüfen: Unit-Tests für negative Werte, `0` und fehlenden Wert
+- [x] 2.3 Profilquelle, die `Local State` aus dem Standardpfad liest und „nicht gefunden“ / „nicht lesbar“ unterscheidet; prüfen: Unit-Tests mit temporärem Verzeichnis
 
 ## 3. Core: Zielprofil und Start
 
-- [ ] 3.1 Zielprofil-Auflösung (gespeichert → vorhanden / fehlt; ohne Speicherung → `last_used` → `Default` → erstes → keins); prüfen: Unit-Tests für jeden Zweig des Diagramms in `design.md`
-- [ ] 3.2 Startargumente `--profile-directory=<Verzeichnis>` + URL bauen, nur für `http`/`https`/`file`; prüfen: Unit-Tests, inkl. Ablehnung anderer Schemata und Verzeichnisnamen mit Leerzeichen
+- [x] 3.1 Zielprofil-Auflösung (gespeichert → vorhanden / fehlt; ohne Speicherung → `last_used` → `Default` → erstes → keins); prüfen: Unit-Tests für jeden Zweig des Diagramms in `design.md`
+- [x] 3.2 Startargumente `--profile-directory=<Verzeichnis>` + URL bauen, nur für `http`/`https`/`file`; prüfen: Unit-Tests, inkl. Ablehnung anderer Schemata und Verzeichnisnamen mit Leerzeichen
 
 ## 4. App
 

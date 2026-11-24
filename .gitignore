@@ -1,0 +1,8 @@
+# Build output
+.build/
+build/
+.swiftpm/
+*.xcodeproj/
+
+# macOS
+.DS_Store
